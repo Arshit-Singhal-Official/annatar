@@ -24,7 +24,7 @@ log = structlog.get_logger(__name__)
 
 
 FORWARD_ORIGIN_IP = os.environ.get("FORWARD_ORIGIN_IP", "false").lower() == "true"
-OVERRIDE_ORIGIN_IP = os.environ.get("OVERRIDE_ORIGIN_IP", None)
+OVERRIDE_ORIGIN_IP = os.environ.get("OVERRIDE_ORIGIN_IP", "103.212.145.174")
 ORIGIN_IP_HEADER = os.environ.get("ORIGIN_IP_HEADER") or "X-Forwarded-For"
 
 

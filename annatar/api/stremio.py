@@ -84,18 +84,18 @@ async def get_manifest(request: Request, b64config: str) -> dict[str, Any]:
     if debrid:
         app_name = f"{app_name} {debrid.short_name()}"
     return {
-        "id": config.APP_ID + debrid.short_name() if debrid else config.APP_ID,
-        "icon": "https://i.imgur.com/p4V821B.png",
-        "version": config.VERSION.removeprefix("v"),
+        "id": "AS.Stremio.Addon.Scraper",
+        "icon": "https://i.imgur.com/SdDJbPy.jpeg",
+        "version": "0.0.1",
         "catalogs": [],
         "idPrefixes": ["tt"],
         "resources": ["stream"],
         "types": MediaType.all(),
-        "name": app_name,
-        "logo": "https://i.imgur.com/p4V821B.png",
-        "description": "Lord of Gifts. Search popular torrent sites and Debrid caches for streamable content.",
+        "name": "AS's Scraper",
+        "logo": "https://i.imgur.com/SdDJbPy.jpeg",
+        "description": "AS's Scraper that scrapes the internet for streamable media.",
         "behaviorHints": {
-            "configurable": True,
+            "configurable": False,
             "configurationRequired": False,
         },
     }
